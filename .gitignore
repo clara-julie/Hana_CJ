@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtuelle Python-miljøer
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VS Code lokale indstillinger
+.vscode/
+
+# Mac
+.DS_Store
+
+# Miljøfiler og hemmelige nøgler
+.env
+.env.*
