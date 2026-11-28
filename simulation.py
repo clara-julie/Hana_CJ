@@ -26,10 +26,10 @@ def simulate_wealth(age_shares, medians, percentile_values=None, seed=42):
     rng = np.random.default_rng(seed)
     n = 10000
 
-    # Draw a random number between 0 and 1 for each adult
+    # Drawing a random number between 0 and 1 for each adult
     u = rng.uniform(0, 1, size=n)
 
-    # Assign adults to age groups based on population shares
+    # Assigning adults to age groups based on population shares
     age = np.zeros(n, dtype=int)
     lower = 0
 
@@ -39,10 +39,10 @@ def simulate_wealth(age_shares, medians, percentile_values=None, seed=42):
         age[mask] = j
         lower = upper
 
-    # Give each adult the median wealth of their age group
+    # Giving each adult the median wealth of their age group
     wealth = np.asarray(medians)[age].copy()
 
-    # Optionally allow wealth to vary within age groups (Part 2.2)
+    # Allowing wealth to vary within age groups (Part 2.2)
     if percentile_values is not None:
         ranks = rng.integers(1, 100, size=n)
 
